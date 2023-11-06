@@ -19,7 +19,8 @@ void main() {
     final counter2 = find.text('1');
     expect(counter2, findsNothing);
 
-    final incrementButton = find.byType(FloatingActionButton);
+    // final incrementButton = find.byType(FloatingActionButton);
+    final incrementButton = find.byKey(const Key('incrementCounter'));
     await tester.tap(incrementButton);
 
     await tester.pump();
